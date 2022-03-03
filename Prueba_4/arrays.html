@@ -22,8 +22,25 @@
       <h1>Manejando Arrays</h1>
       <script>
 
-        document.write("<p> Los primer articulo <strong>");
+        document.write("<p><strong>" + articulo + "</strong></p>");
+
+        document.write("<p> El primer articulo <strong>");
         document.write(articulo[0] +" , " + articulo + "</strong></p>");
+
+        articulo.unshift("Gorra");  // AGREGAR UN VALOR AL ARRAY DE PRIMERO
+        articulo.push("Tennis");// AGREGAR UN VALOR AL FINAL 
+        //articulo.shift(); PARA ELIMINAR EL PRIMER ELEMENTO
+        //articulo.pop(); PARA ELIMINAR EL ULTIMO ELEMENTO
+        
+        articulo.push(prompt("Introduce el articulo"));
+        
+        document.write("<p><strong>" + articulo + "</strong></p>");
+
+        document.write("<p> El primer articulo <strong>");
+        document.write(articulo[0] +" , " + articulo + "</strong></p>");
+
+        document.write("<p> El ultimo articulo <strong>");
+        document.write(articulo[articulo.length-1] + "</strong></p>");
 
         alert(articulo.length);
 		
