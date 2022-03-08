@@ -8,12 +8,28 @@
 </head>
 <body>
     
-    <input type="button" id="boton1">
+    <input type="button" id="boton1">   <!-- CREA UN BOTON-->
+    <input type="button" id="boton2">   <!-- CREA UN BOTON-->
+    <input type="text" id="texto1"><!--CREA UN CUADRO DE TEXTO-->
+
     <script>
 
-        var miboton=document.getElementById("boton1");
+        var miboton1=document.getElementById("boton1"); // CREA UNA VARIABLE EN DONDE AGREGA EL BOTON CREADO
+        var miboton2=document.getElementById("boton2"); // CREA UNA VARIABLE EN DONDE AGREGA EL BOTON CREADO
+        var cuadroTexto=document.getElementById("texto1"); // CREA UNA VARIABLE EN DONDE AGREGA EL TEXTO CREADO
 
-        miboton.style.width="500px";
+        miboton1.style.width="100px";  // MODIFICA EL ANCHO DEL BOTON
+        miboton1.style.height="100px"; // MODIFICA EL ALTO DEL BOTON
+        //miboton1.style.background="red"; // MODIFICA EL COLOR DEL BOTON
+
+        miboton2.style.width="100px";  // MODIFICA EL ANCHO DEL BOTON
+        miboton2.style.height="100px"; // MODIFICA EL ALTO DEL 
+        miboton2.focus();   //PARA MARCAR EL FOCO DONDE INICIA EL INDICADOR SELECIONADO 
+
+        cuadroTexto.style.background="blue";
+        cuadroTexto.value="hola";
+        cuadroTexto.style.height="50px";
+
     </script>
 
 </body>
