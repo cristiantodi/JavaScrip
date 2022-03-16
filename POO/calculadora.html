@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+<script>
+ var num1 = parseInt(prompt("Ingrese primer numero:")); //parceInt para pasar un String a numero
+ var num2 = parseInt(prompt("Ingrese segundo numero:"));
+ var operacion = prompt("Ingrese operacion a realizar:");
+
+if(!isNaN(num1) && !isNaN(num2)){
+    alert("Es un numero")
+}
+else{
+    if(typeof(num1)=="string" || typeof(num2)=="string"){  // typeof para mirar que tipo es la variable
+        alert("No es un numero")
+
+    }
+}
+
+ if (operacion=="suma"){
+     alert(num1 + num2)
+ }
+ if (operacion=="resta"){
+    alert(num1 - num2)
+}
+if (operacion=="multiplicar"){
+    alert(num1 * num2)
+}
+if (operacion=="dividir"){
+    alert(num1 / num2)
+}
+
+</script>
+</body>
+</html>
