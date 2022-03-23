@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+
     <script>
         var meses=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","nobiembre","diciembre"];
         var contador =0;
@@ -19,25 +18,73 @@
     <script>
         var nombre, edad, poblacion;
         nombre= prompt("Introduce nombre:");
+        while(!isNaN(nombre)){
+            nombre= prompt("Introduce nombre:");
+        }
+
         edad= prompt("Introduce edad: ");
         while (edad <= 0 || edad >=105){
             edad= prompt("Edad incorrecta, Introduce edad: ");
          }
-        poblacion= prompt("Introduce pobracion: ")
 
-       
-    </script>
-    <div id="contenedor">
-    <p>Nombre:
-    <script>document.write(nombre);</script>
-    </p>
-    <p>Edad:
-    <script>document.write(edad);</script>
-    </p>
-    <p>Poblacion:
-    <script>document.write(poblacion);</script>
-    </p>
-    </div>
+        poblacion= prompt("Introduce poblacion: ")
+        while(!isFinite(poblacion)){
+        poblacion= prompt("Introduce poblacion: ")
+        }
+
+        </script>
+
+        <div id="contenedor">
+            <p>Nombre:
+            <script>document.write(nombre);</script>
+            </p>
+            <p>Edad:
+            <script>document.write(edad);</script>
+            </p>
+            <p>Poblacion:
+            <script>document.write(poblacion);</script>
+            </p>
+        </div>
+
+</head>
+<!-- ********************   Otro *********************************** Tema -->
+<body>
+<table width="30%" border="0">
+    <tr>
+        <td><label for="texfield1"></label>
+        <input type="text" name="textfield1" id="c_mensaje"></td>
+        <td><label for="texfield2"></label>
+        <input type="text" name="textfield2" id="c_intentos"></td>
+    </tr>
+</table>
+
+
+<script>
+    var aleatorio=Math.round(Math.random()*100);
+    var intentos=0, mini=0;
+
+    var mensaje=document.getElementById("c_mensaje");
+    var intentos_consumidos=document.getElementById("c_intentos");
+    
+    do{
+        mini=prompt("Introduce un # :")
+        if (aleatorio>mini){
+            alert("Mas alto");
+        }
+        if( aleatorio<mini){
+            alert("Mas bajo")
+        }
+        intentos++;
+        mensaje.value=aleatorio;
+        intentos_consumidos.value=intentos;
+    }while (aleatorio!=mini){
+        alert("Correcto");
+    }
+
+document.write("Correcto ha consumido" + intentos + "intentos");
+
+</script>
+
 
 </body>
 </html>
