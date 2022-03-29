@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .linkdestacados{
+            background-color:#f00;
+        }
+
+        a{
+            display: block;
+            margin-bottom: 20px;
+            font-size:24px;
+        }
+
+        table{
+            text-align: center;
+            border: none;
+        }
+
+        td{
+            border:none;
+        }
+
+        #contieneEnlaces{
+            position:absolute;
+            left:32px;
+            top:65px;
+            width:400px;
+            height:650px;
+            z-index: 1;
+            padding: 100;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        //    $("a[href^='https://']").addClass("linkdestacados"); Resaltar en color algun enlace con el https de inicio
+            document.getElementById("cursos").addEventListener("click",resaltacurso, false);
+            document.getElementById("informacion").addEventListener("click",resaltaejemplo, false);
+        });
+
+        function resaltacurso(){
+            $(".cursos").addClass("linkdestacados");
+        }
+
+        function resaltaejemplo(){
+            $(".ejemplos").addClass("linkdestacados");
+        }
+    </script>
+
+</head>
+<body>
+    <div id="contieneEnlaces">
+        <a href="https://www.mercadolibre.com.co/" target="_blank" class="cursos">
+        Mercado Libre
+        </a><br>
+
+        <a href="https://www.google.com.co/" target="_blank" class="cursos">
+        Google
+        </a><br>
+
+        <a href="https://www.youtube.com.co/" target="_blank" class="ejemplos">
+        YouTube
+        </a><br>
+
+        <a href="https://www.wikipedia.org/" target="_blank" class="ejemplos">
+        Wikipedia
+        </a><br>
+    </div>
+
+    <table width="100%" border="1">
+        <tr>
+            <td> Cursos destacados&nbsp;&nbsp; <input type="button" value="Cursos" id="cursos"> </td>
+            <td> Informacion adicional&nbsp;&nbsp; <input type="button" value="Informacion" id="informacion"> </td>
+        </tr>
+</body>
+</html>
