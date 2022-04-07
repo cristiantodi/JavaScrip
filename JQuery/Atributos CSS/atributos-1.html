@@ -6,7 +6,11 @@
 
     <style>
         .linkdestacados{
-            background-color:#f00;
+         /*   background-color:#f00;*/
+            color: red;
+            font-weight: bold;
+            margin-left: 20px;
+            font-family: Comic Sans MS;
         }
 
         a{
@@ -45,11 +49,16 @@
         });
 
         function resaltacurso(){
-            $(".cursos").addClass("linkdestacados");
+        /*    $(".cursos").addClass("linkdestacados");
+            $(".ejemplos").removeClass("linkdestacados");   */
+            $(".cursos").toggleClass("linkdestacados");
         }
 
         function resaltaejemplo(){
-            $(".ejemplos").addClass("linkdestacados");
+        /*    $(".ejemplos").addClass("linkdestacados");
+            $(".cursos").removeClass("linkdestacados"); */
+            $(".ejemplos").toggleClass("linkdestacados");
+
         }
     </script>
 
@@ -75,8 +84,8 @@
 
     <table width="100%" border="1">
         <tr>
-            <td> Cursos destacados&nbsp;&nbsp; <input type="button" value="Cursos" id="cursos"> </td>
-            <td> Informacion adicional&nbsp;&nbsp; <input type="button" value="Informacion" id="informacion"> </td>
+            <td> Cursos destacados&nbsp;&nbsp; <input type="checkbox" value="Cursos" id="cursos"> </td>
+            <td> Informacion adicional&nbsp;&nbsp; <input type="checkbox" value="Informacion" id="informacion"> </td>
         </tr>
 </body>
 </html>

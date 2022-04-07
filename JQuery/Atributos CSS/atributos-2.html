@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cambio de atributos CSS</title>
+
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        div{
+            width: 20%;
+            margin: 0 50px;
+            float: left;
+            border: red solid 2px;
+            padding: 10px;
+        }
+
+        table{
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var botones=document.querySelectorAll("input");
+            for(var i=0; botones.length; i++){
+                    botones[i].addEventListener("click", aumentar, false);
+            botones[i].addEventListener("click", disminuye, false);
+            }
+        });
+      
+        
+
+        function aumentar(e){
+            //var tamDefecto=$("#noticias1").css("font-size");
+            //tamDefecto=parseInt(tamDefecto);
+            //alert(tamDefecto);
+            //$("#noticias1").css("font-size", tamDefecto*1.1);
+            var zonaActuacion;
+            if(e.target==aumentar1){
+                zonaActuacion="#noticias1";
+            }
+            else if(e.target==aumentar2){
+                zonaActuacion="#noticias2";
+            }
+            else if(e.target==aumentar3){
+                zonaActuacion="#noticias3"; 
+            }
+            var tamDefecto=$(zonaActuacion).css("font-size");
+            tamDefecto=parseInt(tamDefecto);
+            $(zonaActuacion).css("font-size", tamDefecto*1.1);
+        }
+
+        function disminuye(e){
+            var zonaActuacion;
+            if(e.target==disminuir1){
+                zonaActuacion="#noticias1"
+            }
+            else if(e.targe==disminuir2){
+                zonaActuacion="#noticias2" 
+            }
+            else if(e.targe==disminuir3){
+                zonaActuacion="#noticias3" 
+            }
+            var tamDefecto=$(zonaActuacion).css("font-size");
+            tamDefecto=parseInt(tamDefecto);
+            $("#noticias1").css("font-size",tamDefecto-1.1);
+
+        }
+    </script>
+
+</head>
+<body>
+    <h1>NOTICIAS</h1>
+    <div id="noticias1">"Python es un lenguaje de alto nivel de programación interpretado cuya filosofía hace hincapié en
+        la legibilidad de su código, se utiliza para desarrollar aplicaciones de todo tipo, ejemplos: Instagram, Netflix,
+         Panda 3D, entre otros."<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumentar1"></td>
+        <td style="text-align: right"><input type="button" value="Disminuir" id="disminuir1"></td></tr></table>
+    </div>
+
+    <div id="noticias2">"Python es un lenguaje de alto nivel de programación interpretado cuya filosofía hace hincapié en
+        la legibilidad de su código, se utiliza para desarrollar aplicaciones de todo tipo, ejemplos: Instagram, Netflix,
+         Panda 3D, entre otros."<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumentar2"></td>
+       <td style="text-align: right"><input type="button" value="Disminuir" id="disminuir2"></td></tr></table>
+   </div>
+   
+   <div id="noticias3">"Python es un lenguaje de alto nivel de programación interpretado cuya filosofía hace hincapié en
+        la legibilidad de su código, se utiliza para desarrollar aplicaciones de todo tipo, ejemplos: Instagram, Netflix,
+         Panda 3D, entre otros."<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumentar3"></td>
+   <td style="text-align: right"><input type="button" value="Disminuir" id="disminuir3"></td></tr></table>
+</div>
+</body>
+</html>

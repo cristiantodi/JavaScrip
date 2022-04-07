@@ -1,0 +1,4 @@
+Video 52
+	Presentacion de imagenes seleccionadas (Se agrandan al darle click)
+	Tambien Google maps,URL no existentes, youtube
+	Libreria fancybox --- http://fancybox.net/

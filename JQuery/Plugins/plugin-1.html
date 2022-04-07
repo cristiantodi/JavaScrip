@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+
+    <style>
+        #menu{
+            width: 70px;
+            background-color: blue;
+            padding:20px 20px 0 20px;
+            position: absolute;
+            left: -92px;
+            z-index: 100;
+        }
+        #menu img{
+            margin-bottom: 20px;
+            border: 1px solid white;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        p{
+            margin-left: 150px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery.easing.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#menu").hover(function(){
+
+                $(this).stop().animate({
+                    left: "0px"
+                },500,"easeInSine");// Termina Anime
+                
+            },
+            function(){
+                $(this).stop().animate({
+                    left: "-92px"
+                },1500,"easeOutBounce");
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    <div id="menu">
+        <img src="imagen1.jpg" width="70" height="70" alt="blue">
+        <img src="imagen2.jpg" width="70" height="70" alt="red">
+    </div>
+    <h1>Menu deslizante</h1>
+    <p>Pasa el raton por encima</p>    
+</body>
+</html>
